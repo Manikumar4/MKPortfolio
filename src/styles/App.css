@@ -1,0 +1,36 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-surface);
+  border-radius: 6px;
+}
+
+body[data-theme="light"] ::-webkit-scrollbar-track {
+  background: var(--light-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vibrant-gradient);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-gradient);
+  background-clip: content-box;
+}
