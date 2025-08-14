@@ -7,11 +7,11 @@ import { ExternalLink, Github, Play, X } from "lucide-react"
 import Image from "next/image";
 
 const projects = [
-      {
+    {
     title: "AI Chatbot Assistant",
     description:
       "An interactive AI chatbot powered by natural language processing to handle real-time queries, integrated seamlessly with web applications for intelligent customer support.",
-    image: "/aichat.png?height=300&width=500",
+    image: "/aichat.png?height=300 &width=500",
     technologies: ["React.js", "Node.js", "Express.js", "OpenAI API", "Socket.IO"],
     liveDemo: "https://mkchatbot.netlify.app",
     sourceCode: "https://github.com/Manikumar4/AiChatbot",
@@ -40,6 +40,7 @@ const projects = [
     category: "Full Stack",
     featured: true,
   },
+
   {
     title: "Diabetes Prediction Model",
     description:
@@ -157,13 +158,13 @@ export default function Projects() {
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-58 object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <motion.button
                       onClick={() => setSelectedProject(project)}
-                      className="flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg text-white font-medium"
-                      whileHover={{ scale: 1.05 }}
+                      className="flex items-center gap-9 px-15 py-15 bg-white/20 backdrop-blur-sm rounded-lg text-white font-medium"
+                      whileHover={{ scale: 0.90 }}
                       whileTap={{ scale: 0.95 }}
                     >
                       <Play size={16} />
