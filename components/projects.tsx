@@ -7,6 +7,28 @@ import { ExternalLink, Github, Play, X } from "lucide-react"
 import Image from "next/image";
 
 const projects = [
+      {
+    title: "AI Chatbot Assistant",
+    description:
+      "An interactive AI chatbot powered by natural language processing to handle real-time queries, integrated seamlessly with web applications for intelligent customer support.",
+    image: "/aichat.png?height=300&width=500",
+    technologies: ["React.js", "Node.js", "Express.js", "OpenAI API", "Socket.IO"],
+    liveDemo: "https://mkchatbot.netlify.app",
+    sourceCode: "https://github.com/Manikumar4/AiChatbot",
+    category: "AI/ML",
+    featured: true,
+  },
+  {
+    title: "Advanced Full-Stack eCommerce with Admin Panel",
+    description:
+      "Next-generation eCommerce platform featuring product management, analytics dashboard, order tracking, user authentication, payment gateway integration, and a secure admin interface.",
+    image: "/advecom.png?height=300&width=500",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT", "Redux"],
+    liveDemo: "https://mkcart.onrender.com",
+    sourceCode: "https://github.com/Manikumar4/MKCart",
+    category: "Full Stack",
+    featured: true,
+  },
   {
     title: "MERN Stack eCommerce Website",
     description:
@@ -42,22 +64,6 @@ const projects = [
       "Modern, responsive portfolio website showcasing projects and skills with smooth animations and mobile-first design.",
     image: "/port.png?height=300&width=500",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-    category: "Frontend",
-  },
-  {
-    title: "Interactive Tic-Tac-Toe Game",
-    description:
-      "Browser-based tic-tac-toe game with AI opponent, score tracking, and smooth animations built with vanilla JavaScript.",
-    image: "/tic.png?height=300&width=500",
-    technologies: ["HTML", "CSS", "JavaScript", "Game Logic"],
-    category: "Frontend",
-  },
-  {
-    title: "Stopwatch Web Application",
-    description:
-      "Precision stopwatch application with lap timing, pause/resume functionality, and clean user interface.",
-    image: "/stop.png?height=300&width=500",
-    technologies: ["HTML", "CSS", "JavaScript", "Web APIs"],
     category: "Frontend",
   },
 ]
