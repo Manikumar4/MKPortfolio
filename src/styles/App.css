@@ -4,9 +4,9 @@
 /* CSS Variables */
 :root {
   /* Dark theme colors */
-  --dark-bg: #06151b;
-  --dark-surface: #08191c;
-  --dark-border: #16213e;
+  --dark-bg: #000000;
+  --dark-surface: #000000;
+  --dark-border: #000000;
   --dark-text: #ffffff;
   --dark-text-secondary: #a0a0a0;
 
@@ -42,6 +42,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Merriweather', serif;
+ 
 }
 
 html {
@@ -51,6 +52,7 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 body {
@@ -58,6 +60,7 @@ body {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-x: hidden;
   font-family: 'Merriweather', serif;
+  
 }
 
 
