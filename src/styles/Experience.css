@@ -1,0 +1,328 @@
+.experience-section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.experience-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .experience-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .experience-container {
+    padding: 0 2rem;
+  }
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.experience-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .experience-title {
+    font-size: 3rem;
+  }
+}
+
+.experience-title-highlight {
+  background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 25%, #45b7d1 50%, #96ceb4 75%, #feca57 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 25%, #45b7d1 50%, #96ceb4 75%, #feca57 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+.experience-subtitle {
+  font-size: 1.25rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.theme-dark .experience-subtitle {
+  color: #9ca3af;
+}
+
+.theme-light .experience-subtitle {
+  color: var(--light-text-secondary);
+}
+
+.experience-timeline {
+  position: relative;
+}
+
+.experience-timeline-line {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+}
+
+@media (min-width: 768px) {
+  .experience-timeline-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.experience-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .experience-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.experience-timeline-dot {
+  position: absolute;
+  left: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  .experience-timeline-dot {
+    left: 50%;
+  }
+}
+
+.experience-content {
+  margin-left: 3rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .experience-content {
+    margin-left: 0;
+    width: 50%;
+    padding-right: 2rem;
+  }
+
+  .experience-item:nth-child(even) .experience-content {
+    padding-right: 0;
+    padding-left: 2rem;
+  }
+}
+
+.experience-card {
+  backdrop-filter: blur(20px);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-dark .experience-card {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.theme-light .experience-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.experience-card:hover {
+  transform: scale(1.02) translateY(-5px);
+}
+
+.theme-dark .experience-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.theme-light .experience-card:hover {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.experience-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.experience-card-title {
+  flex: 1;
+}
+
+.experience-job-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.theme-light .experience-job-title {
+  color: var(--light-text);
+}
+
+.experience-company {
+  color: #60a5fa;
+  font-weight: 500;
+}
+
+.experience-card-meta {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.theme-light .experience-card-meta {
+  color: var(--light-text-secondary);
+}
+
+.experience-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.experience-description {
+  margin-bottom: 1rem;
+}
+
+.experience-description-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-description-item {
+  color: #d1d5db;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.theme-light .experience-description-item {
+  color: var(--light-text-secondary);
+}
+
+.experience-description-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #60a5fa;
+  font-weight: bold;
+}
+
+.experience-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-tech-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+}
+
+.experience-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.experience-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.experience-action-btn.primary {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: white;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
+}
+
+.experience-action-btn.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+}
+
+.experience-action-btn.secondary {
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme-dark .experience-action-btn.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.theme-light .experience-action-btn.secondary {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--light-text);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.experience-action-btn.secondary:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
