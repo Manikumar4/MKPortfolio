@@ -1,0 +1,374 @@
+.interactive-elements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 500;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #667eea;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+}
+
+.cursor-ring {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #667eea;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.custom-cursor.hovered .cursor-ring {
+  transform: translate(-50%, -50%) scale(1.5);
+  border-color: #764ba2;
+}
+
+.cursor-glow {
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.3), transparent);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-cursor.hovered .cursor-glow {
+  opacity: 1;
+}
+
+.floating-particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(1px);
+}
+
+.floating-icons-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-icon {
+  position: absolute;
+  color: rgba(102, 126, 234, 0.3);
+  filter: blur(0.5px);
+}
+
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #5b1818, #073f3c);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: scroll-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes scroll-glow {
+  from {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.scroll-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: scroll-ripple 2s infinite;
+}
+
+@keyframes scroll-ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.theme-switcher {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  z-index: 998;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+}
+
+.theme-switcher:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.theme-icon {
+  color: #667eea;
+}
+
+.theme-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.theme-switcher:hover .theme-glow {
+  opacity: 0.2;
+}
+
+
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.trail-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(102, 126, 234, 0.6);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sound-visualizer {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: end;
+  gap: 2px;
+  height: 40px;
+  z-index: 997;
+  pointer-events: none;
+}
+
+.sound-bar {
+  width: 3px;
+  background: linear-gradient(to top, #667eea, #764ba2);
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+.magic-sparkles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 501;
+}
+
+.sparkle {
+  position: absolute;
+  color: rgba(255, 215, 0, 0.8);
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6));
+}
+
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 502;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  color: rgba(255, 182, 193, 0.7);
+  filter: drop-shadow(0 0 8px rgba(255, 182, 193, 0.5));
+}
+
+[data-theme="Premium"] {
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --accent-color: #4facfe;
+}
+
+[data-theme="neon"] {
+  --primary-color: #ff006e;
+  --secondary-color: #8338ec;
+  --accent-color: #3a86ff;
+}
+
+[data-theme="minimal"] {
+  --primary-color: #6b7280;
+  --secondary-color: #374151;
+  --accent-color: #1f2937;
+}
+
+[data-theme="cosmic"] {
+  --primary-color: #7c3aed;
+  --secondary-color: #2563eb;
+  --accent-color: #0891b2;
+}
+
+@media (max-width: 768px) {
+  .theme-switcher {
+    top: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+  }
+
+  .floating-action-menu {
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .fab-main {
+    width: 55px;
+    height: 55px;
+  }
+
+  .fab-option {
+    width: 40px;
+    height: 40px;
+  }
+
+  .scroll-to-top {
+    bottom: 7rem;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .sound-visualizer {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-particle,
+  .floating-icon,
+  .sparkle,
+  .floating-heart,
+  .trail-dot {
+    animation: none;
+  }
+
+  .scroll-glow,
+  .fab-glow,
+  .avatar-glow {
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .floating-particle,
+  .floating-icon {
+    opacity: 0.3;
+  }
+
+  .notification-toast {
+    border: 2px solid #000;
+  }
+}

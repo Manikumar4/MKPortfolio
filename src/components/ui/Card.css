@@ -1,0 +1,162 @@
+/* Card Component Styles */
+.card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.card-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.card-hover:hover .card-shine {
+  left: 100%;
+}
+
+/* Card Variants */
+.card-glass {
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .card-glass {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.theme-light .card-glass {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-vibrant {
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.theme-dark .card-vibrant {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1));
+  box-shadow: 0 8px 32px rgba(255, 107, 107, 0.2);
+}
+
+.theme-light .card-vibrant {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.15), rgba(78, 205, 196, 0.15));
+  box-shadow: 0 8px 32px rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+}
+
+.card-neon {
+  background: linear-gradient(135deg, rgba(255, 0, 128, 0.1), rgba(64, 224, 208, 0.1));
+  border: 1px solid rgba(255, 0, 128, 0.3);
+  box-shadow: 0 0 30px rgba(255, 0, 128, 0.2);
+}
+
+.card-aurora {
+  background: linear-gradient(135deg, rgba(168, 237, 234, 0.1), rgba(254, 214, 227, 0.1));
+  border: 1px solid rgba(168, 237, 234, 0.3);
+  box-shadow: 0 8px 32px rgba(168, 237, 234, 0.2);
+}
+
+/* Hover Effects */
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.theme-dark .card-hover:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.theme-light .card-hover:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-glass.card-hover:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-vibrant.card-hover:hover {
+  border-color: rgba(255, 107, 107, 0.4);
+}
+
+.card-gradient.card-hover:hover {
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.5);
+  filter: brightness(1.1);
+}
+
+.card-neon.card-hover:hover {
+  box-shadow: 0 0 40px rgba(255, 0, 128, 0.4);
+  border-color: rgba(255, 0, 128, 0.5);
+}
+
+.card-aurora.card-hover:hover {
+  box-shadow: 0 12px 40px rgba(168, 237, 234, 0.3);
+  border-color: rgba(168, 237, 234, 0.5);
+}
+
+/* 3D Effect */
+.card-3d {
+  transform-style: preserve-3d;
+}
+
+.card-3d:hover {
+  transform: rotateY(5deg) rotateX(5deg) translateY(-8px);
+}
+
+/* Morphing Effect */
+.card-morph {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morphing 8s ease-in-out infinite;
+}
+
+@keyframes morphing {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+/* Interactive Card */
+.card-interactive {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-interactive::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.card-interactive:hover::before {
+  left: 100%;
+}
