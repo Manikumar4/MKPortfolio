@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, memo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { usePortfolioStore } from "../lib/store"
-import { Menu, X, Sun, Moon, Sparkles, Star } from "lucide-react"
+import { Menu, X, Sun, Moon } from "lucide-react"
 import { Link, useLocation } from "react-router-dom"
 import '../styles/Navigation.css'
 

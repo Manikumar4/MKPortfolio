@@ -7,7 +7,7 @@ import Skills from "./Skills"
 import Projects from "./Projects"
 import Education from "./Education"
 import Contact from "./Contact"
-import { Mail, Linkedin, Github, Sparkles, Heart } from "lucide-react"
+import { Mail, Linkedin, Github, Sparkles } from "lucide-react"
 import About from "./About"
 import "./home.css"
 

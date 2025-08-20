@@ -1,19 +1,12 @@
-"use client"
-
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect} from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   ArrowUp,
-
-
   Star,
   Sparkles,
   Gem,
   Gift,
   ShoppingBag,
-  Search,
-  User,
-  TrendingUp,
   Award,
   Target,
   Compass,
@@ -41,12 +34,11 @@ import "./InteractiveElements.css"
 
 const InteractiveElements = () => {
   const [showScrollTop, setShowScrollTop] = useState(false)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
   const [particles, setParticles] = useState([])
   const [floatingIcons, setFloatingIcons] = useState([])
   const [isHovered, setIsHovered] = useState(false)
-  const [currentTheme, setCurrentTheme] = useState("Premium")
-  const canvasRef = useRef(null)
+  
 
 
   const iconsList = [
@@ -183,14 +175,6 @@ const InteractiveElements = () => {
     return () => clearInterval(interval)
   }, [])
 
-  const handleThemeChange = () => {
-    const themes = ["Premium", "neon", "minimal", "cosmic"]
-    const currentIndex = themes.indexOf(currentTheme)
-    const nextTheme = themes[(currentIndex + 1) % themes.length]
-    setCurrentTheme(nextTheme)
-
-    document.documentElement.setAttribute("data-theme", nextTheme)
-  }
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

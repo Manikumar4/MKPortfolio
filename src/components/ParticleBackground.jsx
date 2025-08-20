@@ -1,14 +1,13 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef} from "react"
 import { motion } from "framer-motion"
 
 const ParticleBackground = () => {
   const canvasRef = useRef(null)
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+
   const particlesRef = useRef([])
   const mouseRef = useRef({ x: 0, y: 0 })
-  const animationRef = useRef()
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -21,7 +20,7 @@ const ParticleBackground = () => {
       const { innerWidth, innerHeight } = window
       canvas.width = innerWidth
       canvas.height = innerHeight
-      setDimensions({ width: innerWidth, height: innerHeight })
+     
 
       particlesRef.current.forEach((particle) => {
         
